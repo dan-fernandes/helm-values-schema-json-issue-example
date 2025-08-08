@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/losisin/helm-values-schema-json
+    rev: v2.2.0
+    hooks:
+      - id: helm-schema
+        args:
+          # Single or multiple yaml files as inputs (comma-separated)
+          - --values=helm-values-schema-json-issue-example/values.yaml
+          # Output file path (default "values.schema.json")
+          - --output=helm-values-schema-json-issue-example/values.schema.json
+          # Draft version (4, 6, 7, 2019, or 2020) (default 2020)
+          - --draft=2020
+          # Indentation spaces (even number)
+          - --indent=4
